@@ -1,0 +1,111 @@
+{
+  "users": [
+    {
+      "userFirstName": "Peter",
+      "userLastName": "Paarker",
+      "email": "peterparker@gmail.com",
+      "role": "student",
+      "phoneNumber": "7980143748",
+      "password": "password",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "userFirstName": "Clark",
+      "userLastName": "Kent",
+      "email": "superman@gmail.com",
+      "role": "student",
+      "phoneNumber": "7980143748",
+      "password": "password"
+    },
+    {
+      "id": 3,
+      "userFirstName": "Robert",
+      "userLastName": "Downey",
+      "email": "ironman@gmail.com",
+      "role": "student",
+      "phoneNumber": "7980143748",
+      "password": "password"
+    },
+    {
+      "userFirstName": "Farhan",
+      "userLastName": "Abdulla",
+      "email": "farhan@gmail.com",
+      "role": "admin",
+      "phoneNumber": "7980143748",
+      "password": "password",
+      "id": 4
+    }
+  ],
+  "books": [
+    {
+      "id": 1,
+      "bookName": "In Search of Lost Time",
+      "authorName": "Marcel Proust",
+      "isbnNumber": "ISBN-1",
+      "price": 200,
+      "stockQuantity": 0
+    },
+    {
+      "id": 2,
+      "bookName": "Ulysses",
+      "authorName": "James Joyce",
+      "isbnNumber": "ISBN-3",
+      "price": 250,
+      "stockQuantity": 6
+    },
+    {
+      "id": 3,
+      "bookName": "Don Quixote",
+      "authorName": "Miguel de Cervantes",
+      "isbnNumber": "ISBN-2",
+      "price": 250,
+      "stockQuantity": 4
+    },
+    {
+      "id": 4,
+      "bookName": "The Great Gatsby",
+      "authorName": "F. Scott Fitzgerald",
+      "isbnNumber": "ISBN-4",
+      "price": 250,
+      "stockQuantity": 8
+    },
+    {
+      "id": 5,
+      "bookName": "One Hundred Years of Solitude",
+      "authorName": "Gabriel Garcia",
+      "isbnNumber": "ISBN-5",
+      "price": 250,
+      "stockQuantity": 7
+    },
+    {
+      "bookName": "And then there were none",
+      "authorName": "Agatha Cristie",
+      "isbnNumber": "ISBN-4",
+      "price": 250,
+      "stockQuantity": 7,
+      "id": 6
+    }
+  ],
+  "orders": [],
+  "cart": [
+    {
+      "id": "1",
+      "userId": "1",
+      "BookId": []
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "BookId": [
+        3,
+        4
+      ]
+    },
+    {
+      "id": "3",
+      "userId": "3",
+      "BookId": []
+    }
+  ]
+}

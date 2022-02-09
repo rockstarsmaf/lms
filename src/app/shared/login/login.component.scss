@@ -1,0 +1,36 @@
+.login {
+  height: 400px;
+  width: 30%;
+  background-color: rgba(139, 199, 99, 0.795);
+  position: absolute;
+  left: 35%;
+  margin-top: 6%;
+}
+
+.emailTextBox,
+.passwordTextBox {
+  width: 80%;
+  height: 35px;
+  margin-top: 15%;
+  border: none;
+  margin-left: 10%;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.emailTextBox:focus,
+.passwordTextBox:focus {
+  outline: none;
+}
+
+.loginButton {
+  margin-top: 10%;
+  width: 40%;
+  margin-left: 30%;
+  height: 35px;
+  border: none;
+  background-color: rgba(93, 158, 50, 0.933);
+  color: white;
+  font-family: Roboto;
+  font-weight: 500;
+}

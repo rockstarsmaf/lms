@@ -1,0 +1,48 @@
+<div class="container mainBody">
+  <div class="row">
+    <div class="col-lg-12 searchBar">
+      <input
+        type="text"
+        placeholder="Search Orders"
+        class="bookSearchBox"
+        (change)="filterBooks($event)"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table>
+        <tr>
+          <th *ngIf="role == 'student'">Id</th>
+          <th *ngIf="role == 'admin'"></th>
+          <th>Book Name</th>
+          <th>User Name</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+        <tr *ngFor="let order of orderList">
+          <td *ngIf="role == 'student'">{{ order.id }}</td>
+          <td *ngIf="role == 'admin'">
+            <button class="returnButton">Return</button>
+          </td>
+          <td>{{ order.bookId }}</td>
+          <td>{{ order.userId }}</td>
+          <td>{{ order.borrowedDate }}</td>
+          <td *ngIf="order.hasReturned" class="returned">Yes</td>
+          <td *ngIf="!order.hasReturned" class="notReturned">No</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mat-paginator
+        [length]="totalBooksCount"
+        [pageSize]="pageSize"
+        aria-label="Select page"
+        (page)="changePage($event)"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,54 @@
+<div class="container mainBody">
+  <div class="row">
+    <div class="col-lg-12 searchBar">
+      <input
+        type="text"
+        placeholder="Search Orders"
+        class="bookSearchBox"
+        (change)="filterBooks($event)"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table *ngIf="isLoggedIn">
+        <tr>
+          <th *ngIf="role == 'student'">Id</th>
+          <th *ngIf="role == 'admin'"></th>
+          <th>Book Name</th>
+          <th>User Name</th>
+          <th>Date</th>
+          <th>Status</th>
+        </tr>
+        <tr *ngFor="let order of orderList">
+          <td *ngIf="role == 'student'">{{ order.id }}</td>
+          <td *ngIf="role == 'admin' && order.hasReturned">
+            <mat-icon class="bookReturned">done_all</mat-icon>
+          </td>
+          <td *ngIf="role == 'admin' && !order.hasReturned">
+            <button class="returnButton" (click)="returnBook(order.id)">
+              Return
+            </button>
+          </td>
+          <!-- 2022-01-31T00:20:22.651Z -->
+          <td>{{ order.bookId }}</td>
+          <td>{{ order.userId }}</td>
+          <td>{{ order.borrowedDate | date: "yyyy-MM-dd" }}</td>
+          <td *ngIf="order.hasReturned" class="returned">Returned</td>
+          <td *ngIf="!order.hasReturned" class="notReturned">Not Returned</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <mat-paginator
+        [length]="totalBooksCount"
+        [pageSize]="pageSize"
+        aria-label="Select page"
+        (page)="changePage($event)"
+      >
+      </mat-paginator>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+.top-navbar {
+  background-color: #2725a0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.library-header {
+  color: white;
+  font-weight: 500;
+  margin-left: 3%;
+  padding: 0%;
+}
+.nav-item {
+  font-weight: 500;
+}
+
+.active {
+  border-bottom: 2px solid yellowgreen;
+}
+
+.cart {
+  margin-left: 10%;
+}
+
+.login {
+  width: 10%;
+}
+
+.logoutButton,
+.loginButton {
+  color: white;
+}
+
+.loginButton a {
+  color: white;
+}
+
+.loginButton a:hover {
+  color: black;
+}
+
+.login button,
+.userIcon {
+  margin-left: 10%;
+}
+
+.userIcon,
+.cart {
+  color: white;
+}

@@ -1,0 +1,25 @@
+<div class="container mainBody">
+  <div class="row">
+    <div class="col-lg-12 searchBar">
+      <button (click)="checkoutCart()">Checkout cart</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <table>
+        <tr>
+          <th>Id</th>
+          <th>Book Name</th>
+          <th>Author Name</th>
+          <th>Price</th>
+        </tr>
+        <tr *ngFor="let book of booksInCart">
+          <td>{{ book.id }}</td>
+          <td>{{ book.bookName }}</td>
+          <td>{{ book.authorName }}</td>
+          <td>{{ book.price }}</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

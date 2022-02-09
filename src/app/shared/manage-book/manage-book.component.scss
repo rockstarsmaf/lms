@@ -1,0 +1,69 @@
+.mainBody {
+  max-width: 2000px;
+  background-color: rgba(216, 208, 208, 0.933);
+  height: 600px;
+}
+
+.searchBar {
+  background-color: yellowgreen;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.bookSearchBox {
+  height: 35px;
+  width: 25%;
+  border: none;
+  padding-left: 10px;
+  font-family: Roboto;
+  font-weight: 500;
+  margin-left: 40%;
+}
+
+input:focus {
+  outline: none;
+  padding-left: 10px;
+}
+
+.booksTable {
+  width: 100%;
+  margin-top: 2%;
+}
+
+.returned {
+  background-color: lightgreen;
+  font-weight: 500;
+}
+
+.notReturned {
+  background-color: rgb(228, 117, 117);
+  font-weight: 500;
+  color: white;
+}
+
+.returnButton {
+  border: none;
+}
+
+.returnButton:hover {
+  box-shadow: 1px 1px 1px 1px grey;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 16px;
+}
+
+th,
+td {
+  background-color: white;
+  border-bottom: 1px solid gray;
+}

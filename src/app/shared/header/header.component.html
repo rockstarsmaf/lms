@@ -1,0 +1,106 @@
+  <!-- <div class="container">
+  <div class="row top-navbar">
+    <div class="col-sm-3" style="background-color: aliceblue">
+      <p class="library-header">Library Management System</p>
+    </div>
+    <div class="col-md-3 abcd">
+      <p class="library-header">Library Management System</p>
+    </div>
+  </div>
+</div> -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-success">
+  <a class="navbar-brand" href="#" matTooltip="Library Management System"
+    >LMS</a
+  >
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse topNav" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li
+        [ngClass]="
+          currentPage == 'searchBooks' ? 'nav-item active' : 'nav-item'
+        "
+        (click)="navigateHeaderPage('searchBooks')"
+      >
+        <a
+          class="nav-link"
+          [routerLink]="['/search']"
+          routerLinkActive="router-link-active"
+          >Search Books <span class="sr-only">(current)</span></a
+        >
+      </li>
+      <li
+        [ngClass]="
+          currentPage == 'pastBorrows' ? 'nav-item active' : 'nav-item'
+        "
+        (click)="navigateHeaderPage('pastBorrows')"
+      >
+        <a
+          class="nav-link"
+          [routerLink]="['/transactions']"
+          routerLinkActive="router-link-active"
+          >Past Borrows</a
+        >
+      </li>
+      <!-- <li
+        [ngClass]="currentPage == 'manageBook' ? 'nav-item active' : 'nav-item'"
+        (click)="navigateHeaderPage('manageBook')"
+        *ngIf="role == 'admin'"
+      >
+        <a
+          class="nav-link"
+          [routerLink]="['/manageBook']"
+          routerLinkActive="router-link-active"
+          >Manage Books</a
+        >
+      </li> -->
+      <li
+        [ngClass]="currentPage == 'cart' ? 'nav-item active' : 'nav-item'"
+        (click)="navigateHeaderPage('cart')"
+        *ngIf="role != 'admin'"
+      >
+        <a
+          class="nav-link"
+          [routerLink]="['/cart']"
+          routerLinkActive="router-link-active"
+          ><mat-icon class="cart" [matBadge]="cartCount" matBadgeOverlap="false"
+            >shopping_cart</mat-icon
+          ></a
+        >
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0 login">
+      <button
+        class="btn btn-outline-light my-2 my-sm-0 loginButton"
+        type="submit"
+        *ngIf="!isLoggedIn"
+      >
+        <a [routerLink]="['/login']" routerLinkActive="router-link-active"
+          >Login</a
+        >
+      </button>
+      <button
+        class="btn btn-outline-light my-2 my-sm-0 logoutButton"
+        type="submit"
+        *ngIf="isLoggedIn"
+        (click)="logOut()"
+      >
+        Log Out
+      </button>
+      <mat-icon [matTooltip]="userName" class="userIcon" *ngIf="isLoggedIn"
+        >person</mat-icon
+      >
+    </form>
+  </div>
+</nav>
