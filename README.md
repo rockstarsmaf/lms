@@ -1,6 +1,31 @@
 # Librarymanagement
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.0.\
+This is a Library Management System, where user can add books to cart and then checkout. There is a section called pastborrows where books taken and the status is shown as if the book is returned or not. Admin can change that status from his/her login.\
+I have used a fake json server and added all the required date in db.json file.\
+I have added an auth guard so no one can go to random page without logging in. It stays on the search page because anyone can search for books and see what are available without logging in.\
+## To Run
+Open 2 terminals\
+In the first one:\
+`npm install`(if node modules folder is not present)\
+`npm install ngx-bootstrap bootstrap --save`\
+`ng add @angular/material`\
+\
+In the second one:\
+`npm install -g json-server`\
+`json-server --watch db.json`\
+
+## Credentials
+For Admin:\
+`Email: farhan@gmail.com`\
+`Password: password`\
+For User:\
+`Email: peterparker@gmail.com`\
+`Password: password`\
+`Email: superman@gmail.com`\
+`Password: password`\
+`Email: ironman@gmail.com`\
+`Password: password`
 
 ## Development server
 
