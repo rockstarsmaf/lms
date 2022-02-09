@@ -43,6 +43,6 @@ export class HeaderComponent implements OnInit {
   }
   logOut() {
     sessionStorage.clear();
-    this.router.navigateByUrl('search');
+    this.router.navigateByUrl('login');
   }
 }
