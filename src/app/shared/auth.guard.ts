@@ -9,10 +9,12 @@ import { AuthService } from './auth.service';
 export class AuthGuard implements CanActivate {
   constructor(private auth: AuthService, private router: Router){}
   canActivate(){
-    if(this.auth.IsLoggedIn()){
+    if(this.auth.IsLoggedOut()==true){
+    return false;
+  }
+  else if(this.auth.IsLoggedIn()==true){
     return true;
   }
     this.router.navigate(['search']);
-        return false;
-}
+        return false;}
 }
