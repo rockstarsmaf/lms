@@ -7,9 +7,6 @@ export class AuthService {
 
   constructor() {}
   IsLoggedIn(){
-    return !!sessionStorage.getItem('token');
-  }
-  IsLoggedOut(){
-    return !!sessionStorage.getItem('toke');
+    return !!localStorage.getItem('token');
   }
 }
